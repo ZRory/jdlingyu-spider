@@ -112,6 +112,7 @@ public class SpiderJdApplication {
 		saveImageLatch.await();
 		LOGGER.info("----------------------|套图存储完毕|----------------------");
 		LOGGER.info("----------------------|程序即将退出|----------------------");
+		
 	}
 
 }
