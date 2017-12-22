@@ -66,7 +66,7 @@ public class DetailsPageService implements Runnable {
 				LOGGER.error("DetailsPageService 从队列获取数据失败！");
 			}
 
-			LOGGER.info("DetailsPageService-2:" + "正在爬取的网站：" + mainImageSet.getUrl());
+			LOGGER.info("DetailsPageService-2:" + "正在爬取的网站:" + mainImageSet.getUrl());
 			String html = httpClientUtil.sendGetRequestForHtml(mainImageSet.getUrl());
 			if (StringUtils.isEmpty(html)) {
 				throw new Exception("html string 为空");
@@ -94,7 +94,7 @@ public class DetailsPageService implements Runnable {
 			responseQueue.put(detailsPage);
 			// 成功套图数+1
 			successImageSetCount.incrementAndGet();
-			LOGGER.info("DetailsPageService-2:" + "成功解析出套图：" + detailsPage.getTitle());
+			LOGGER.info("DetailsPageService-2:" + "成功解析出套图:" + detailsPage.getTitle());
 
 		} catch (Exception e) {
 			LOGGER.error("MainImageTask 获取/解析HTML失败");

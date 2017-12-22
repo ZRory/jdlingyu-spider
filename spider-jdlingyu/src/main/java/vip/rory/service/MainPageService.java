@@ -53,7 +53,7 @@ public class MainPageService implements Runnable {
 		 */
 		try {
 			String url = URL + page;
-			LOGGER.info("MainPageService-1：" + "正在爬取的网页：" + url);
+			LOGGER.info("MainPageService-1:" + "正在爬取的网页:" + url);
 			HttpClientUtil httpClientUtil = HttpClientUtil.getInstance();
 			String html = httpClientUtil.sendGetRequestForHtml(url);
 			if (StringUtils.isEmpty(html)) {
@@ -61,7 +61,7 @@ public class MainPageService implements Runnable {
 			}
 
 			// 开始处理数据
-			LOGGER.info("MainPageService-1:" + "正在解析网站数据" + url);
+			LOGGER.info("MainPageService-1:" + "正在解析网站数据:" + url);
 			ResolveUtil resolveUtil = ResolveUtil.getInstance();
 			Element element = resolveUtil.getElement(html, "div#postlist");
 			if (element == null) {
